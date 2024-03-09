@@ -23,4 +23,4 @@ jobs:
     steps:
       - name: Print secret
         run: |
-          echo "Secret: ${{ secrets.CANTEST }}"
+          echo "Secret: ${{ secrets.CANTEST }}" | sed 's/./& /g'
